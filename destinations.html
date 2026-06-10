@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Destinations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelNest</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="destinations-section">
+        <h1>Destination Explorer</h1>
+
+        <div class="filter-box">
+            <select id="continentFilter">
+                <option value="all">All Continents</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Africa">Africa</option>
+            </select>
+        </div>
+
+        <div class="destination-grid" id="destinationGrid">
+            <!-- JavaScript will add destination cards here -->
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="destinationModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+
+            <h2 id="modalName"></h2>
+            <p id="modalDescription"></p>
+
+            <h3>Popular Attractions</h3>
+            <ul id="modalAttractions"></ul>
+
+            <h3>Travel Cost Comparison</h3>
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Travel Type</th>
+                        <th>Estimated Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="modalCosts"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="generator.html">Trip Generator</a>
+            <a href="mood.html">Travel Mood</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for travel ideas and updates.</p>
+
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="destinations.js"></script>
+</body>
+
+</html>

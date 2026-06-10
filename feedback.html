@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelNest</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="feedback-section">
+        <h1>Submit Feedback</h1>
+        <p>Send us your feedback or check the FAQs below.</p>
+
+        <form id="feedbackForm">
+            <label for="userName">Name</label>
+            <input type="text" id="userName" placeholder="Enter your name">
+
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" placeholder="Enter your email">
+
+            <label for="userMessage">Message</label>
+            <textarea id="userMessage" placeholder="Write your message"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+            <p id="feedbackMessage"></p>
+        </form>
+
+        <div class="faq-box">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">What is TravelNest?</button>
+                <div class="faq-answer">
+                    <p>TravelNest is a travel planning website that helps users explore destinations and plan trips.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Can I save my budget plans?</button>
+                <div class="faq-answer">
+                    <p>Yes, trip budgets can be saved using localStorage in your browser.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Can I save destinations to my wishlist?</button>
+                <div class="faq-answer">
+                    <p>Yes, selected destinations from the trip generator can be saved to your wishlist.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Does TravelNest work on mobile?</button>
+                <div class="faq-answer">
+                    <p>Yes, the website is designed to work on desktop, tablet and mobile screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="generator.html">Trip Generator</a>
+            <a href="mood.html">Travel Mood</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for travel ideas and updates.</p>
+
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="feedback.js"></script>
+</body>
+
+</html>

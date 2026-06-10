@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Random Trip Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelNest</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="generator-section">
+        <h1>Random Trip Generator</h1>
+        <p>Choose your travel type and budget range to get a random destination suggestion.</p>
+
+        <div class="generator-box">
+            <div class="generator-form">
+                <label for="travelType">Travel Type</label>
+                <select id="travelType">
+                    <option value="adventure">Adventure</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="nature">Nature</option>
+                </select>
+
+                <label for="budgetRange">Budget Range</label>
+                <select id="budgetRange">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <button id="generateBtn" type="button">Generate Trip</button>
+                <button id="surpriseBtn" type="button">Surprise Me Again</button>
+            </div>
+
+            <div class="suggestion-card" id="suggestionCard">
+                <h2>Your destination will appear here</h2>
+                <p>Select your preferences and click generate.</p>
+            </div>
+        </div>
+
+        <div class="wishlist-section">
+            <h2>My Wishlist</h2>
+            <div id="wishlistBox"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="generator.html">Trip Generator</a>
+            <a href="mood.html">Travel Mood</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for travel ideas and updates.</p>
+
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="generator.js"></script>
+</body>
+
+</html>

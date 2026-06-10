@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelNest</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Your trusted partner for travel inspiration.</h1>
+            <p>
+                TravelNest is your all in one platform to explore destinations,
+                plan trips and track itineraries.
+            </p>
+            <a href="destinations.html" class="view-btn">View Destinations</a>
+        </div>
+
+        <div class="hero-image">
+            <img id="heroSlide" src="images/bali.png" alt="Travel destination image">
+        </div>
+    </section>
+
+    <section class="destination-day-section">
+        <h2>Destination of the day</h2>
+        <p>
+            View our handpicked destination of the day
+        </p>
+
+        <div class="destination-card">
+            <img id="dayImage" src="images/bali.png" alt="Destination image" class="destination-day-img">
+
+            <h3 id="dayName">Bali, Indonesia</h3>
+
+            <p id="dayDescription">
+            A tropical island famous for beaches, temples, rice terraces and relaxing holidays.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="generator.html">Trip Generator</a>
+            <a href="mood.html">Travel Mood</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for travel ideas and updates.</p>
+
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

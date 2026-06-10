@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Budget Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelNest</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="budget-section">
+        <h1>Trip Budget Planner</h1>
+        <p>Calculate your estimated trip cost and save your travel budget.</p>
+
+        <div class="budget-box">
+            <form id="budgetForm">
+                <label for="destination">Destination</label>
+                    <select id="destination" required>
+                        <option value="">Select destination</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Kyoto">Kyoto</option>
+                        <option value="Ella">Ella</option>
+                        <option value="Santorini">Santorini</option>
+                        <option value="Cape Town">Cape Town</option>
+                        <option value="Monaco">Monaco</option>
+                    </select>
+
+                <label for="days">Number of days</label>
+                <input type="number" id="days" placeholder="Enter number of days" required>
+
+                <label for="dailyBudget">Daily budget</label>
+                <input type="number" id="dailyBudget" placeholder="Enter daily budget" required>
+
+                <button type="submit">Calculate Budget</button>
+            </form>
+
+            <div class="budget-result">
+                <h2>Budget Result</h2>
+
+                <p id="totalCost">Estimated Total Cost: -</p>
+                <p id="budgetStatus">Budget Status: -</p>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <button id="saveBudgetBtn">Save Budget</button>
+            </div>
+        </div>
+
+        <div class="saved-budget-section">
+            <h2>Saved Budgets</h2>
+            <div id="savedBudgets"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="generator.html">Trip Generator</a>
+            <a href="mood.html">Travel Mood</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for travel ideas and updates.</p>
+
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="budget.js"></script>
+
+</body>
+
+</html>

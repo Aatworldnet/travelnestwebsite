@@ -1,0 +1,1447 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+/* Header */
+.header
+{
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navbar
+{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 18px 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+{
+    font-size: 24px;
+    font-weight: 800;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links
+{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a
+{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover
+{
+    color: darkblue;
+}
+
+/* Hamburger */
+.hamburger
+{
+    display: none;
+    width: 38px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span
+{
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: black;
+    margin: 5px auto;
+}
+
+/* Hero Section */
+.hero-section
+{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 40vh;
+    padding: 70px 55px;
+    gap: 40px;
+    background-color: white;
+}
+
+.hero-text h1
+{
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero-text p
+{
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.view-btn
+{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.view-btn:hover
+{
+    background-color: darkblue;
+}
+
+.hero-image img
+{
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Destination of the Day */
+.destination-day-section
+{
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+    padding: 70px 20px;
+    margin-top: 40px;
+}
+
+.destination-day-section h2
+{
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.destination-day-section p
+{
+    font-size: 15px;
+    margin-bottom: 35px;
+    color: black;
+}
+
+.destination-card
+{
+    width: 650px;
+    max-width: 90%;
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+}
+
+.destination-day-img
+{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 22px;
+}
+
+.destination-card h3
+{
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.destination-card p
+{
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px)
+{
+    .navbar
+    {
+        padding: 16px 25px;
+    }
+
+    .hamburger
+    {
+        display: block;
+    }
+
+    .nav-links
+    {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        gap: 18px;
+        padding: 25px 0;
+        display: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .nav-links.active
+    {
+        display: flex;
+    }
+
+    .hero-section
+    {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 45px 25px;
+        gap: 25px;
+    }
+
+    .hero-text h1
+    {
+        font-size: 32px;
+    }
+
+    .hero-text p
+    {
+        font-size: 15px;
+    }
+
+    .hero-image img
+    {
+        width: 100%;
+        height: 260px;
+    }
+
+    .destination-day-section
+    {
+        padding: 50px 20px;
+        margin-top: 20px;
+    }
+
+    .destination-day-section h2
+    {
+        font-size: 32px;
+    }
+
+    .destination-card
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .destination-day-img
+    {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* Destination Page */
+.destinations-section
+{
+    padding: 60px 55px;
+    text-align: center;
+    background-color: orange;
+}
+
+.destinations-section h1
+{
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.filter-box
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.filter-box select
+{
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Destination Cards */
+.destination-grid
+{
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.destination-item
+{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.destination-item:hover
+{
+    transform: translateY(-5px);
+}
+
+.destination-item img
+{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.destination-item h2
+{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.destination-item p
+{
+    color: black;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+/* Modal */
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.modal-content
+{
+    background-color: white;
+    width: 620px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.close-btn
+{
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.close-btn:hover
+{
+    color: darkblue;
+}
+
+.modal-content h2
+{
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.modal-content p
+{
+    color: black;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.modal-content h3
+{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.modal-content ul
+{
+    padding-left: 22px;
+    margin-bottom: 18px;
+}
+
+.modal-content li
+{
+    margin-bottom: 6px;
+}
+
+.cost-table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.cost-table th,
+.cost-table td
+{
+    border: 1px solid grey;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.cost-table th
+{
+    background-color: darkblue;
+    color: white;
+}
+
+/* Mobile */
+@media screen and (max-width: 750px)
+{
+    .destinations-section
+    {
+        padding: 40px 20px;
+    }
+
+    .destinations-section h1
+    {
+        font-size: 35px;
+    }
+
+    .filter-box
+    {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .destination-grid
+    {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .destination-item img
+    {
+        height: 240px;
+    }
+
+    .modal-content
+    {
+        margin: 50px auto;
+        padding: 24px;
+    }
+}
+
+/* Budget Planner Page */
+.budget-section
+{
+    padding: 60px 55px;
+    text-align: center;
+    background-color: orange;
+}
+
+.budget-section h1
+{
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.budget-section > p
+{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Budget Form and Result */
+.budget-box
+{
+    display: block;
+}
+
+#budgetForm
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+#budgetForm label
+{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#budgetForm input,
+#budgetForm select
+{
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+}
+
+#budgetForm button,
+#saveBudgetBtn
+{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#budgetForm button:hover,
+#saveBudgetBtn:hover
+{
+    background-color: black;
+}
+
+/* Budget Result */
+.budget-result
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.budget-result h2
+{
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.budget-result p
+{
+    color: black;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.progress-bar
+{
+    width: 100%;
+    height: 18px;
+    background-color: #dddddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-fill
+{
+    width: 0%;
+    height: 100%;
+    background-color: darkblue;
+    transition: width 0.6s ease;
+}
+
+/* Saved Budget Section */
+.saved-budget-section
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.saved-budget-section h2
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.saved-budget-card
+{
+    background-color: white;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.saved-budget-card h3
+{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.saved-budget-card p
+{
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* Mobile */
+@media screen and (max-width: 750px)
+{
+    .budget-section
+    {
+        padding: 40px 20px;
+    }
+
+    .budget-section h1
+    {
+        font-size: 35px;
+    }
+
+    #budgetForm,
+    .budget-result,
+    .saved-budget-section
+    {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px;
+    }
+}
+
+/* Random Trip Generator Page */
+.generator-section
+{
+    text-align: center;
+    background-color: orange;
+}
+
+.generator-section h1
+{
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 700;
+    padding: 60px 55px 20px;
+    color: black;
+}
+
+.generator-section > p
+{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Generator Form */
+.generator-box
+{
+    display: block;
+}
+
+.generator-form
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.generator-form label
+{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.generator-form select
+{
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+}
+
+.generator-form button
+{
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.generator-form button:hover
+{
+    background-color: black;
+}
+
+#surpriseBtn
+{
+    background-color: darkblue;
+}
+
+#surpriseBtn:hover
+{
+    background-color: black;
+}
+
+/* Suggested Destination */
+.suggestion-card
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.suggestion-card img
+{
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.suggestion-card h2
+{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.suggestion-card p
+{
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.suggestion-card button
+{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.suggestion-card button:hover
+{
+    background-color: black;
+}
+
+/* Animation for Surprise Me Again */
+.suggestion-card.animate
+{
+    animation: popAnimation 0.5s ease;
+}
+
+@keyframes popAnimation
+{
+    0%
+    {
+        transform: scale(0.95);
+        opacity: 0.5;
+    }
+
+    100%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Wishlist */
+.wishlist-section
+{
+    width: 100%;
+    margin: 40px 0 0 0;
+    background-color: lightblue;
+    padding: 50px 55px;
+    text-align: center;
+}
+
+.wishlist-section h2
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.wishlist-item
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 15px;
+    background-color: white;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.wishlist-item h3
+{
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.wishlist-item p
+{
+    color: black;
+}
+
+/* Mobile */
+@media screen and (max-width: 750px)
+{
+    .generator-section
+    {
+        padding: 0 20px 20px;
+    }
+
+    .generator-section h1
+    {
+        font-size: 35px;
+        padding: 40px 0 20px;
+    }
+
+    .generator-form,
+    .suggestion-card,
+    .wishlist-section
+    {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .suggestion-card img
+    {
+        height: 220px;
+    }
+}
+/* Travel Mood Page */
+.mood-section
+{
+    padding: 60px 55px;
+    text-align: center;
+    background-color: orange;
+}
+
+.mood-section h1
+{
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.mood-section p
+{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Sound Box */
+.sound-box
+{
+    width: 800px;
+    background-color: white;
+    margin: 0 auto 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.sound-box h2
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sound-buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sound-buttons button
+{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sound-buttons button:hover
+{
+    background-color: black;
+}
+
+.sound-buttons button.active-sound
+{
+    background-color: black;
+}
+
+#soundStatus
+{
+    margin-top: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+/* Destination Tracker */
+.tracker-section
+{
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+.tracker-section h2
+{
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.tracker-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tracker-card
+{
+    background-color: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.tracker-card img
+{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tracker-card h3
+{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.tracker-card p
+{
+    color: black;
+    margin-bottom: 15px;
+}
+
+.tracker-card button
+{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.tracker-card button:hover
+{
+    background-color: black;
+}
+
+.status-text
+{
+    font-weight: 700;
+    color: darkblue;
+}
+
+/* Stored Tracker Section */
+.stored-tracker-section
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.stored-tracker-section h2
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.stored-tracker-item
+{
+    background-color: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    text-align: left;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.stored-tracker-item h3
+{
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.stored-tracker-item p
+{
+    color: black;
+}
+
+/* Mobile */
+@media screen and (max-width: 750px)
+{
+    .mood-section
+    {
+        padding: 40px 20px;
+    }
+
+    .mood-section h1
+    {
+        font-size: 35px;
+    }
+
+    .sound-box,
+    .tracker-section,
+    .stored-tracker-section
+    {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .tracker-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .sound-buttons
+    {
+        flex-direction: column;
+    }
+
+    .sound-buttons button
+    {
+        width: 100%;
+    }
+
+    .tracker-card img
+    {
+        height: 200px;
+    }
+}
+
+/* Feedback Page */
+.feedback-section
+{
+    padding: 60px 55px;
+    text-align: center;
+    background-color: orange;
+}
+
+.feedback-section h1
+{
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+.feedback-section p
+{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Feedback Form */
+#feedbackForm
+{
+    width: 800px;
+    background-color: white;
+    margin: 0 auto 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+#feedbackForm label
+{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#feedbackForm input, #feedbackForm textarea
+{
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#feedbackForm textarea
+{
+    height: 140px;
+    resize: vertical;
+}
+
+#feedbackForm button
+{
+    background-color: darkblue;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+#feedbackForm button:hover
+{
+    background-color: black;
+}
+
+#feedbackMessage
+{
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* FAQ */
+.faq-box
+{
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.faq-box h2
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-item
+{
+    margin-bottom: 12px;
+}
+
+.faq-question
+{
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.faq-question:hover
+{
+    background-color: black;
+}
+
+.faq-answer
+{
+    display: none;
+    background-color: white;
+    padding: 14px;
+    border-radius: 6px;
+    margin-top: 5px;
+    border: 1px solid grey;
+}
+
+.faq-answer p
+{
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.faq-answer.active
+{
+    display: block;
+}
+
+/* Mobile */
+@media screen and (max-width: 750px)
+{
+    .feedback-section
+    {
+        padding: 40px 20px;
+    }
+
+    .feedback-section h1
+    {
+        font-size: 35px;
+    }
+
+    #feedbackForm,
+    .faq-box
+    {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .faq-box h2
+    {
+        font-size: 24px;
+    }
+
+    .faq-question
+    {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Footer */
+.footer
+{
+    background-color: darkblue;
+    color: #ffffff;
+}
+
+.footer-content
+{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.footer h2,
+.footer h3
+{
+    margin-bottom: 15px;
+}
+
+.footer p
+{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.footer-links
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a
+{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer-links a:hover
+{
+    text-decoration: underline;
+}
+
+#newsletterForm
+{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#newsletterEmail
+{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-family: arial, Arial, sans-serif;
+}
+
+#newsletterForm button
+{
+    background-color: white;
+    color: darkblue;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: arial, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#newsletterForm button:hover
+{
+    background-color: white;
+}
+
+#newsletterMessage
+{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-bottom
+{
+    border-top: 1px solid grey;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Footer Mobile */
+@media screen and (max-width: 750px)
+{
+    .footer-content
+    {
+        grid-template-columns: 1fr;
+        padding: 35px 25px;
+    }
+
+    #newsletterForm
+    {
+        flex-direction: column;
+    }
+}

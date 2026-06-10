@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Travel Mood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelNest</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="budget.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="mood-section">
+        <h1>Travel Mood</h1>
+        <p>Play travel sounds and track your visited or planned destinations.</p>
+
+        <div class="sound-box">
+            <h2>Ambient Travel Sounds</h2>
+
+            <div class="sound-buttons">
+                <button id="beachBtn" type="button">Beach Sound</button>
+                <button id="forestBtn" type="button">Forest Sound</button>
+                <button id="cityBtn" type="button">City Sound</button>
+            </div>
+
+            <p id="soundStatus">No sound playing.</p>
+
+            <audio id="beachSound" src="sounds/beach.mp3" loop></audio>
+            <audio id="forestSound" src="sounds/forest.mp3" loop></audio>
+            <audio id="citySound" src="sounds/city.mp3" loop></audio>
+        </div>
+
+        <div class="tracker-section">
+            <h2>Destination Tracker</h2>
+
+            <div class="tracker-grid" id="trackerGrid">
+                <!-- JavaScript adds tracker cards here -->
+            </div>
+        </div>
+
+        <div class="stored-tracker-section">
+            <h2>Stored Destination Status</h2>
+            <div id="storedTrackerBox"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="generator.html">Trip Generator</a>
+            <a href="mood.html">Travel Mood</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for travel ideas and updates.</p>
+
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="mood.js"></script>
+</body>
+
+</html>

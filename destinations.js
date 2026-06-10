@@ -1,4 +1,5 @@
-const destinationList = [
+const destinationList =
+[
     {
         name: "Bali",
         country: "Indonesia",
@@ -6,7 +7,8 @@ const destinationList = [
         image: "images/bali.png",
         description: "Bali is a beautiful island destination famous for beaches, temples and rice terraces.",
         attractions: ["Ubud Rice Terraces", "Uluwatu Temple", "Seminyak Beach"],
-        costs: [
+        costs:
+        [
             { type: "Budget", price: "$40 - $70 per day" },
             { type: "Standard", price: "$80 - $150 per day" },
             { type: "Luxury", price: "$200+ per day" }
@@ -19,7 +21,8 @@ const destinationList = [
         image: "images/kyoto.png",
         description: "Kyoto is a cultural city known for temples, gardens and traditional streets.",
         attractions: ["Fushimi Inari Shrine", "Arashiyama Bamboo Grove", "Kiyomizu-dera Temple"],
-        costs: [
+        costs:
+        [
             { type: "Budget", price: "$50 - $90 per day" },
             { type: "Standard", price: "$100 - $180 per day" },
             { type: "Luxury", price: "$250+ per day" }
@@ -32,7 +35,8 @@ const destinationList = [
         image: "images/ella.png",
         description: "Ella is a scenic hill-country destination with tea plantations and mountain views.",
         attractions: ["Nine Arch Bridge", "Little Adam's Peak", "Ravana Falls"],
-        costs: [
+        costs:
+        [
             { type: "Budget", price: "$25 - $50 per day" },
             { type: "Standard", price: "$60 - $120 per day" },
             { type: "Luxury", price: "$180+ per day" }
@@ -45,7 +49,8 @@ const destinationList = [
         image: "images/santorini.png",
         description: "Santorini is famous for white buildings, blue domes and beautiful sunset views.",
         attractions: ["Oia Sunset", "Red Beach", "Fira Town"],
-        costs: [
+        costs:
+        [
             { type: "Budget", price: "$70 - $120 per day" },
             { type: "Standard", price: "$150 - $250 per day" },
             { type: "Luxury", price: "$350+ per day" }
@@ -58,7 +63,8 @@ const destinationList = [
         image: "images/cape-town.png",
         description: "Cape Town is a coastal city with beaches, mountains and adventure activities.",
         attractions: ["Table Mountain", "Cape Point", "V&A Waterfront"],
-        costs: [
+        costs:
+        [
             { type: "Budget", price: "$45 - $80 per day" },
             { type: "Standard", price: "$90 - $170 per day" },
             { type: "Luxury", price: "$250+ per day" }
@@ -71,7 +77,8 @@ const destinationList = [
         image: "images/monaco.png",
         description: "Monaco is known for luxury, yachts and the Formula 1 Grand Prix.",
         attractions: ["Monaco Grand Prix", "Monaco Cathedral", "Port Hercule"],
-        costs: [
+        costs:
+        [
             { type: "Budget", price: "$100 - $180 per day" },
             { type: "Standard", price: "$200 - $350 per day" },
             { type: "Luxury", price: "$500+ per day" }
@@ -89,10 +96,12 @@ const modalDescription = document.getElementById("modalDescription");
 const modalAttractions = document.getElementById("modalAttractions");
 const modalCosts = document.getElementById("modalCosts");
 
-function displayDestinations(list) {
+function displayDestinations(list)
+{
     destinationGrid.innerHTML = "";
 
-    for (let i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++)
+    {
         const destination = list[i];
 
         const card = document.createElement("div");
@@ -112,7 +121,8 @@ function displayDestinations(list) {
         card.appendChild(name);
         card.appendChild(country);
 
-        card.addEventListener("click", function () {
+        card.addEventListener("click", function ()
+        {
             openModal(destination);
         });
 
@@ -120,31 +130,37 @@ function displayDestinations(list) {
     }
 }
 
-function filterByContinent() {
+function filterByContinent()
+{
     const selectedContinent = continentFilter.value;
 
-    if (selectedContinent === "all") {
+    if (selectedContinent === "all")
+    {
         displayDestinations(destinationList);
-    } else {
+    } else
+    {
         const filteredList = [];
 
-        for (let i = 0; i < destinationList.length; i++) {
-            if (destinationList[i].continent === selectedContinent) {
+        for (let i = 0; i < destinationList.length; i++)
+        {
+            if (destinationList[i].continent === selectedContinent)
+            {
                 filteredList.push(destinationList[i]);
             }
         }
-
         displayDestinations(filteredList);
     }
 }
 
-function openModal(destination) {
+function openModal(destination)
+{
     modalName.textContent = destination.name + ", " + destination.country;
     modalDescription.textContent = destination.description;
 
     modalAttractions.innerHTML = "";
 
-    for (let i = 0; i < destination.attractions.length; i++) {
+    for (let i = 0; i < destination.attractions.length; i++
+    {
         const item = document.createElement("li");
         item.textContent = destination.attractions[i];
         modalAttractions.appendChild(item);
@@ -152,7 +168,8 @@ function openModal(destination) {
 
     modalCosts.innerHTML = "";
 
-    for (let i = 0; i < destination.costs.length; i++) {
+    for (let i = 0; i < destination.costs.length; i++)
+    {
         const row = document.createElement("tr");
 
         const typeCell = document.createElement("td");
@@ -166,7 +183,6 @@ function openModal(destination) {
 
         modalCosts.appendChild(row);
     }
-
     modal.style.display = "block";
 }
 
@@ -176,8 +192,10 @@ closeModal.addEventListener("click", function () {
     modal.style.display = "none";
 });
 
-window.addEventListener("click", function (event) {
-    if (event.target === modal) {
+window.addEventListener("click", function (event)
+{
+    if (event.target === modal)
+    {
         modal.style.display = "none";
     }
 });

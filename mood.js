@@ -12,7 +12,8 @@ const storedTrackerBox = document.getElementById("storedTrackerBox");
 
 let currentSound = "";
 
-const moodDestinations = [
+const moodDestinations =
+[
     {
         name: "Bali",
         country: "Indonesia",
@@ -45,7 +46,8 @@ const moodDestinations = [
     }
 ];
 
-function stopAllSounds() {
+function stopAllSounds()
+{
     beachSound.pause();
     forestSound.pause();
     citySound.pause();
@@ -62,15 +64,18 @@ function stopAllSounds() {
     currentSound = "";
 }
 
-function playSound(soundName) {
-    if (currentSound === soundName) {
+function playSound(soundName)
+{
+    if (currentSound === soundName)
+    {
         stopAllSounds();
         return;
     }
 
     stopAllSounds();
 
-    if (soundName === "beach") {
+    if (soundName === "beach")
+    {
         beachSound.play();
         beachBtn.classList.add("active-sound");
         soundStatus.textContent = "Beach sound is playing.";
@@ -88,29 +93,35 @@ function playSound(soundName) {
     }
 }
 
-beachBtn.addEventListener("click", function () {
+beachBtn.addEventListener("click", function ()
+{
     playSound("beach");
 });
 
-forestBtn.addEventListener("click", function () {
+forestBtn.addEventListener("click", function ()
+{
     playSound("forest");
 });
 
-cityBtn.addEventListener("click", function () {
+cityBtn.addEventListener("click", function ()
+{
     playSound("city");
 });
 
-function displayTrackerCards() {
+function displayTrackerCards()
+{
     trackerGrid.innerHTML = "";
 
     let trackedDestinations = JSON.parse(localStorage.getItem("trackedDestinations")) || {};
 
-    for (let i = 0; i < moodDestinations.length; i++) {
+    for (let i = 0; i < moodDestinations.length; i++)
+    {
         const destination = moodDestinations[i];
 
         let status = trackedDestinations[destination.name];
 
-        if (status === undefined) {
+        if (status === undefined)
+        {
             status = "Not selected";
         }
 
@@ -137,11 +148,13 @@ function displayTrackerCards() {
         const plannedBtn = document.createElement("button");
         plannedBtn.textContent = "Planned";
 
-        visitedBtn.addEventListener("click", function () {
+        visitedBtn.addEventListener("click", function ()
+        {
             saveDestinationStatus(destination.name, "Visited");
         });
 
-        plannedBtn.addEventListener("click", function () {
+        plannedBtn.addEventListener("click", function ()
+        {
             saveDestinationStatus(destination.name, "Planned");
         });
 
@@ -156,7 +169,8 @@ function displayTrackerCards() {
     }
 }
 
-function saveDestinationStatus(destinationName, status) {
+function saveDestinationStatus(destinationName, status)
+{
     let trackedDestinations = JSON.parse(localStorage.getItem("trackedDestinations")) || {};
 
     trackedDestinations[destinationName] = status;
@@ -169,19 +183,22 @@ function saveDestinationStatus(destinationName, status) {
     alert(destinationName + " saved as " + status + ".");
 }
 
-function displayStoredTracker() {
+function displayStoredTracker()
+{
     let trackedDestinations = JSON.parse(localStorage.getItem("trackedDestinations")) || {};
 
     storedTrackerBox.innerHTML = "";
 
     const destinationNames = Object.keys(trackedDestinations);
 
-    if (destinationNames.length === 0) {
+    if (destinationNames.length === 0)
+    {
         storedTrackerBox.innerHTML = "<p>No destination status saved yet.</p>";
         return;
     }
 
-    for (let i = 0; i < destinationNames.length; i++) {
+    for (let i = 0; i < destinationNames.length; i++)
+    {
         const destinationName = destinationNames[i];
         const status = trackedDestinations[destinationName];
 

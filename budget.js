@@ -15,7 +15,8 @@ budgetForm.addEventListener("submit", function (event)
     const days = Number(document.getElementById("days").value);
     const dailyBudget = Number(document.getElementById("dailyBudget").value);
 
-    if (destination === "" || days <= 0 || dailyBudget <= 0) {
+    if (destination === "" || days <= 0 || dailyBudget <= 0)
+    {
         alert("Please enter valid budget details.");
         return;
     }
@@ -25,7 +26,8 @@ budgetForm.addEventListener("submit", function (event)
     let status = "";
     let progressWidth = "";
 
-    if (dailyBudget < 50) {
+    if (dailyBudget < 50)
+    {
         status = "Low Budget";
         progressWidth = "35%";
     } else if (dailyBudget >= 50 && dailyBudget <= 150) {
@@ -49,8 +51,10 @@ budgetForm.addEventListener("submit", function (event)
     };
 });
 
-saveBudgetBtn.addEventListener("click", function () {
-    if (currentBudget === null) {
+saveBudgetBtn.addEventListener("click", function ()
+{
+    if (currentBudget === null)
+    {
         alert("Please calculate a budget before saving.");
         return;
     }
@@ -77,7 +81,8 @@ function displaySavedBudgets() {
         return;
     }
 
-    for (let i = 0; i < budgetList.length; i++) {
+    for (let i = 0; i < budgetList.length; i++)
+    {
         const budget = budgetList[i];
 
         const card = document.createElement("div");

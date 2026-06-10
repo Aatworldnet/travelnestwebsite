@@ -159,7 +159,7 @@ function openModal(destination)
 
     modalAttractions.innerHTML = "";
 
-    for (let i = 0; i < destination.attractions.length; i++
+    for (let i = 0; i < destination.attractions.length; i++)
     {
         const item = document.createElement("li");
         item.textContent = destination.attractions[i];
